@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="top-right-buttons">
+    <div class="profile-icon" onclick="toggleProfilePopup()">
+        <img src="awa.png" alt="Profile Icon" class="profile-image">
+    </div>
+    <div id="profilePopup" class="profile-popup">
+        <p>Привет, <span id="username"></span></p>
+        <a href="/logout" class="btn-logout">Выход</a>
+    </div>
+</div>
+
+<div class="splash">
+    <video autoplay muted loop class="video-bg">
+        <source src="kio1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Random Number Generator</h1>
+        <div class="form">
+            <label for="min">Min:</label>
+            <input type="number" id="min" min="0">
+            <label for="max">Max:</label>
+            <input type="number" id="max" min="0">
+            <button onclick="generateRandomNumber()">Generate</button>
+        </div>
+        <div id="result"></div>
+        <div id="previousRequestsContainer" class="previous-requests"></div>
+        <!-- Добавляем ссылку на страницу с колесом фортуны как вкладку -->
+        <a href="../koleso/wheel-of-fortune.html" class="tab-link">Wheel of Fortune</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Nikita Sukhovoi 44090</p>
+    <p>Nikita Shapoval 44976</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

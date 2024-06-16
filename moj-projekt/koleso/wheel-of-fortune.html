@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wheel-styles.css">
+    <style>
+        /* Добавляем стили прямо внутри тега style */
+        .label {
+            font-size: 36px; /* Увеличиваем размер текста */
+        }
+        #numSegments {
+            font-size: 20px;
+            padding: 10px;
+            width: 200px; /* Увеличиваем ширину текстового поля */
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="container">
+        <!-- Значок Профиль и всплывающее окно -->
+        <div class="top-right-buttons">
+            <div class="profile-icon" onclick="toggleProfilePopup()">
+                <img src="awa.png" alt="Profile Icon" class="profile-image">
+            </div>
+            <div id="profilePopup" class="profile-popup">
+                <p>Привет, <span id="username"></span></p>
+                <a href="/logout" class="btn-logout">Выход</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="video-container">
+    <video autoplay muted loop class="page-video">
+        <source src="../liczba/kio1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="splash">
+        <div class="container">
+            <h1>Wheel of Fortune</h1>
+            <label class="label" for="numSegments">Number of Segments:</label> <!-- Применяем класс label -->
+            <input type="number" id="numSegments" min="1" max="9999">
+            <button onclick="createWheel()">Create Wheel</button>
+            <button onclick="spinWheel()">Spin Wheel</button>
+            <div id="wheel" class="wheel"></div>
+            <div id="result"></div>
+            <a href="../liczba/123123.html" class="tab-link">Random Number Generator</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>Nikita Sukhovoi 44090</p>
+    <p>Nikita Shapoval 44976</p>
+</div>
+<script src="wheel.js"></script>
+<script src="../liczba/script.js"></script>
+</body>
+</html>

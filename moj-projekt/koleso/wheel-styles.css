@@ -1,0 +1,169 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splash {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border: 10px solid #01d024;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s ease-out;
+    margin: 0 auto; /* Центрируем колесо по горизонтали */
+}
+
+.sector {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #52ff40;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transform-origin: center;
+    transition: transform 2s ease-out;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ff003f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background-color: #800033;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+.tab-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff003f;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.tab-link:hover {
+    background-color: #800033;
+}
+
+#numSegments {
+    font-size: 20px;
+    padding: 10px;
+    width: 200px; /* Увеличиваем ширину текстового поля */
+}
+
+.label {
+    font-size: 36px; /* Увеличиваем размер текста */
+}
+
+/* Стили для кнопок "Профиль" и "Выход" */
+
+.top-right-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex; /* для горизонтального выравнивания */
+    z-index: 1000; /* Установим высокий z-index, чтобы элементы были над фоновым видео */
+}
+
+.profile-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.profile-popup {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.profile-popup p {
+    margin: 5px 0;
+}
+
+.profile-popup .btn-logout {
+    margin-top: 10px;
+    background-color: #ff003f;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-popup .btn-logout:hover {
+    background-color: #800033;
+}
+.profile-image {
+    width: 75px; /* Задайте желаемую ширину */
+    height: auto; /* Сохраните пропорции по высоте */
+    border-radius: 50%; /* Сделайте изображение круглым */
+    cursor: pointer; /* Установите курсор на указатель */
+}

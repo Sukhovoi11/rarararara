@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.splash {
+    position: relative;
+    height: 100%;
+}
+
+.splash video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #004d00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008000;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+.previous-requests {
+    position: absolute;
+    top: 180px;
+    left: 85px;
+    width: 200px;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.tab-link {
+    position: fixed; /* Зафиксировать элемент */
+    top: -50px; /* Расположить сверху от верхней границы экрана */
+    left: 0px; /* Расположить слева от левой границы экрана */
+    z-index: 1000; /* Установить высокий z-index, чтобы элемент был поверх других */
+    padding: 10px; /* Добавить отступы для текста */
+    background-color: #ff003f; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    text-decoration: none; /* Убрать стандартное подчеркивание ссылки */
+    border-radius: 5px; /* Скруглить углы */
+}
+
+.tab-link:hover {
+    background-color: #800033; /* Изменить цвет фона при наведении */
+}
+
+.top-right-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex; /* для горизонтального выравнивания */
+    z-index: 1000; /* Установим высокий z-index, чтобы элементы были над фоновым видео */
+}
+
+.btn-profile {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: rgb(196, 0, 0);
+    margin-bottom: 20px; /* Дополнительный отступ между формами */
+    backdrop-filter: blur(10px); /* Эффект размытия заднего фона */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-profile:hover {
+    background-color: #8d8d8d;
+}
+
+.profile-popup {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.profile-popup p {
+    margin: 5px 0;
+}
+
+.profile-popup .btn-logout {
+    margin-top: 10px;
+    background-color: #ff003f;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-popup .btn-logout:hover {
+    background-color: #800033;
+}
+.profile-image {
+    width: 75px; /* Задайте желаемую ширину */
+    height: auto; /* Сохраните пропорции по высоте */
+    border-radius: 50%; /* Сделайте изображение круглым */
+    cursor: pointer; /* Установите курсор на указатель */
+}

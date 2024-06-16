@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="regist/nezna.css">
+</head>
+<body>
+<div class="splash">
+    <video autoplay muted loop class="video-bg">
+        <source src="liczba/kio1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="form-container" id="register-form">
+        <h1>Welcome on Random Number Generator</h1>
+        <h2>If you want to continue, please sign up.</h2>
+        <form class="form" action="/register" method="post">
+            <input class="input" type="text" placeholder="Your username" name="username" required>
+            <input class="input" type="email" placeholder="Your email" name="email" required>
+            <input class="input" type="password" placeholder="Password" name="password" required>
+            <input class="input" type="password" placeholder="Confirm Password" name="password_confirm" required>
+            <button class="btn" type="submit">Register</button>
+        </form>
+        <p class="login-link">Already registered? <a href="#" id="login-link">Login here</a></p>
+    </div>
+    <div class="login-container" id="login-form" style="display: none;">
+        <h2>Login</h2>
+        <form class="form" action="/login" method="post">
+            <input class="input" type="email" placeholder="Your email" name="email" required>
+            <input class="input" type="password" placeholder="Password" name="password" required>
+            <button class="btn" type="submit">Login</button>
+        </form>
+        <p class="register-link">Not registered yet? <a href="#" id="register-link">Register here</a></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('login-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('register-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+    });
+
+    document.getElementById('register-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('register-form').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
